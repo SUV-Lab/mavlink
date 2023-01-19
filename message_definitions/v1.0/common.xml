@@ -6251,6 +6251,50 @@
       <field type="uint8_t" name="new_orientation" enum="MAV_SENSOR_ORIENTATION">orientation after calibration.</field>
       <field type="float" name="scale_factor">field radius correction factor</field>
     </message>
+    <message id="199" name="MONITORING">
+      <description>monitoring</description>
+      <field type="uint32_t" name="tow">Time Of Week</field>
+      <field type="float" name="pos_x">current position x</field>
+      <field type="float" name="pos_y">current position y</field>
+      <field type="float" name="pos_z">current position z</field>
+      <field type="float" name="head">current heading</field>
+      <field type="uint32_t" name="status1">status #1</field>
+      <field type="uint32_t" name="status2">status #2 (RESERVED)</field>
+      <field type="uint8_t" name="rtk_nbase">the number of base satellite</field>
+      <field type="uint8_t" name="rtk_nrover">the number of rover satellite</field>
+      <field type="uint8_t" name="battery">Battery (%)</field>
+    </message>
+    <message id="200" name="PIKSI_OBS">
+      <description>piksi_msg_obs</description>
+      <field type="uint16_t" name="sender_id">sender_id</field>
+      <field type="uint16_t" name="msg_type">msg_type</field>
+      <field type="uint8_t" name="len">len</field>
+      <field type="uint8_t[249]" name="data">data</field>
+    </message>
+    <message id="201" name="PIKSI_GLO_BIASES">
+      <description>piksi_glo_biases</description>
+      <field type="uint16_t" name="sender_id">sender_id</field>
+      <field type="uint16_t" name="msg_type">msg_type</field>
+      <field type="uint8_t" name="len">len</field>
+      <field type="uint8_t[9]" name="data">data</field>
+    </message>
+    <message id="202" name="PIKSI_BASE_POS_ECEF">
+      <description>piksi_base_pos_ecef</description>
+      <field type="uint16_t" name="sender_id">sender_id</field>
+      <field type="uint16_t" name="msg_type">msg_type</field>
+      <field type="uint8_t" name="len">len</field>
+      <field type="uint8_t[24]" name="data">data</field>
+    </message>
+    <message id="203" name="PIKSI_POS_LLH">
+      <description>piksi_msg_pos_llh</description>
+      <field type="double" name="lat">lat</field>
+      <field type="double" name="lon">lon</field>
+      <field type="double" name="height">height</field>
+      <field type="uint16_t" name="h_accuracy">h_accuracy</field>
+      <field type="uint16_t" name="v_accuracy">v_accuracy</field>
+      <field type="uint8_t" name="n_sats">n_sats</field>
+      <field type="uint8_t" name="flags">flags</field>
+    </message>
     <!-- 225 EFI_STATUS imported from ardupilotmega.xml -->
     <message id="225" name="EFI_STATUS">
       <description>EFI status output</description>
