@@ -6262,6 +6262,12 @@
       <field type="float" name="pos_y">current position y</field>
       <field type="float" name="pos_z">current position z</field>
       <field type="float" name="head">current heading</field>
+      <field type="float" name="vx">x velocity in NED frame</field>
+      <field type="float" name="vy">y velocity in NED frame</field>
+      <field type="float" name="vz">z velocity in NED frame</field>
+      <field type="float" name="roll">Roll</field>
+      <field type="float" name="pitch">Pitch</field>
+      <field type="float" name="yaw">Yaw</field>
       <field type="uint32_t" name="status1">status #1</field>
       <field type="uint32_t" name="status2">status #2 (RESERVED)</field>
       <field type="uint8_t" name="rtk_nbase">the number of base satellite</field>
