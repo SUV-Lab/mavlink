@@ -6273,6 +6273,9 @@
       <field type="uint8_t" name="rtk_nbase">the number of base satellite</field>
       <field type="uint8_t" name="rtk_nrover">the number of rover satellite</field>
       <field type="uint8_t" name="battery">Battery (%)</field>
+      <field type="float" name="rtk_n">Rtk Baseline North coordinate</field>
+      <field type="float" name="rtk_e">Rtk Baseline East coordinate</field>
+      <field type="float" name="rtk_d">Rtk Baseline Down coordinate</field>
     </message>
     <message id="155" name="SCENARIO_CMD">
       <description>scenario_cmd</description>
