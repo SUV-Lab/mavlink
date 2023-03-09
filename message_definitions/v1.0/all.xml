@@ -29,5 +29,6 @@
     commands: 60050 - 60099
   -->
   <include>AVSSUAS.xml</include>
+  <include>swarm.xml</include>
   <messages/>
 </mavlink>
