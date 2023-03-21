@@ -19,7 +19,7 @@
                 <description>land</description>
             </entry>
             <entry value="5" name="SCENARIO_CMD_SET_CONFIGS">
-                <description>set vairous configurations param1: offset pos x, param2: offset pos y, param5: scenario file name</description>
+                <description>set vairous configurations param1: base vehicle pos x, param2: base vehicle pos y, param5: scenario file name</description>
             </entry>
             <entry value="6" name="SCENARIO_CMD_RESET_CONFIGS">
                 <description>reset configurations</description>
