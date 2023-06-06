@@ -132,7 +132,7 @@ int main(int argc, char* argv[])
 	memset(&gcAddr, 0, sizeof(gcAddr));
 	gcAddr.sin_family = AF_INET;
 	gcAddr.sin_addr.s_addr = inet_addr(target_ip);
-	gcAddr.sin_port = htons(14550);
+	gcAddr.sin_port = htons(18570);
 	
 	
 	
@@ -170,21 +170,22 @@ int main(int argc, char* argv[])
 			mavlink_message_t msg;
 			mavlink_status_t status;
 			
-			printf("Bytes Received: %d\nDatagram: ", (int)recsize);
 			for (i = 0; i < recsize; ++i)
 			{
 				temp = buf[i];
-				printf("%02x ", (unsigned char)temp);
 				if (mavlink_parse_char(MAVLINK_COMM_0, buf[i], &msg, &status))
 				{
-					// Packet received
-					printf("\nReceived packet: SYS: %d, COMP: %d, LEN: %d, MSG ID: %d\n", msg.sysid, msg.compid, msg.len, msg.msgid);
+                    if (msg.msgid == 180) {
+                        mavlink_monitoring_t monitoring;
+                        mavlink_msg_monitoring_decode(&msg, &monitoring);
+                        printf("\nReceived packet: SYS: %d, COMP: %d, LEN: %d, MSG ID: %d\n", msg.sysid, msg.compid, msg.len, msg.msgid);
+                        printf("battery : %d %% \tready : %d \tsafety : %d", monitoring.battery, monitoring.ready, monitoring.safety);
+                    }
+                    // Packet received
 				}
 			}
-			printf("\n");
 		}
 		memset(buf, 0, BUFFER_LENGTH);
-		sleep(1); // Sleep one second
     }
 }
 
@@ -217,3 +218,4 @@ uint64_t microsSinceEpoch()
 	return micros;
 }
 #endif
+
