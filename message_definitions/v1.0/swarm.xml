@@ -39,13 +39,17 @@
             <description>piksi_msg_obs</description>
             <field type="uint16_t" name="sender_id">observation sender id</field>
             <field type="uint16_t" name="msg_type">message type</field>
+            <field type="uint8_t" name="seq">message sequence</field>
+            <field type="uint16_t" name="crc">sbp crc</field>
             <field type="uint8_t" name="len">observation data length</field>
-            <field type="uint8_t[249]" name="data">observation data</field>
+            <field type="uint8_t[164]" name="data">observation data</field>
         </message>
         <message id="182" name="PIKSI_BASE_POS_ECEF">
             <description>piksi_base_pos_ecef</description>
             <field type="uint16_t" name="sender_id">base_pos_ecef sender id</field>
             <field type="uint16_t" name="msg_type">message type</field>
+            <field type="uint8_t" name="seq">message sequence</field>
+            <field type="uint16_t" name="crc">sbp crc</field>
             <field type="uint8_t" name="len">base_pos_ecef data length</field>
             <field type="uint8_t[24]" name="data">base_pos_ecef data</field>
         </message>
@@ -100,6 +104,8 @@
             <description>piksi_glo_biases</description>
             <field type="uint16_t" name="sender_id">glo biases sender id</field>
             <field type="uint16_t" name="msg_type">msg_type</field>
+            <field type="uint8_t" name="seq">message sequence</field>
+            <field type="uint16_t" name="crc">sbp crc</field>
             <field type="uint8_t" name="len">glo biases data length</field>
             <field type="uint8_t[9]" name="data">glo biases data</field>
         </message>
