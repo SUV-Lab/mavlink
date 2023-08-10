@@ -89,6 +89,7 @@
             <field type="float" name="rtk_n">Rtk Baseline North coordinate</field>
             <field type="float" name="rtk_e">Rtk Baseline East coordinate</field>
             <field type="float" name="rtk_d">Rtk Baseline Down coordinate</field>
+            <field type="uint16_t" name="swarm_id">Swarm id for GCS</field>
         </message>
         <message id="185" name="SCENARIO_CMD">
             <description>scenario_cmd</description>
