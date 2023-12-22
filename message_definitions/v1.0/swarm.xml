@@ -6,22 +6,16 @@
             <entry value="0" name="SCENARIO_CMD_SET_START_TIME">
                 <description>set start time for scenario  (param1: start_time)</description>
             </entry>
-            <entry value="1" name="SCENARIO_CMD_SET_RELATIVE_POS">
-                <description>set relative position (param1 : x, param2: y)</description>
-            </entry>
-            <entry value="2" name="SCENARIO_CMD_SELECT_SCENARIO_FILE">
-                <description>set scenario file name (param5 : file name)</description>
-            </entry>
-            <entry value="3" name="SCENARIO_CMD_STOP_SCENARIO">
+            <entry value="1" name="SCENARIO_CMD_STOP_SCENARIO">
                 <description>stop scenario</description>
             </entry>
-            <entry value="4" name="SCENARIO_CMD_EMERGENCY_LAND">
+            <entry value="2" name="SCENARIO_CMD_EMERGENCY_LAND">
                 <description>land</description>
             </entry>
-            <entry value="5" name="SCENARIO_CMD_SET_CONFIGS">
+            <entry value="3" name="SCENARIO_CMD_SET_CONFIGS">
                 <description>set vairous configurations param1: base vehicle pos x, param2: base vehicle pos y, param5: scenario file name</description>
             </entry>
-            <entry value="6" name="SCENARIO_CMD_RESET_CONFIGS">
+            <entry value="4" name="SCENARIO_CMD_RESET_CONFIGS">
                 <description>reset configurations</description>
             </entry>
         </enum>
